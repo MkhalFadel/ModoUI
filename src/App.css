@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Inter', sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+:root {
+   --fontPrimary: "Inter", sans-serif;
+   --fontMono: "JetBrains Mono", monospace;
+
+   /* Base Colors */
+   --backgroundColor: #f7f9fb;
+   --navBackgroundColor: #ffffff;
+   --primaryText: #1c1f23;
+   --secondaryText: #6b7075;
+
+   /* Accent / Highlights */
+   --accent: #0074e0;
+   --linkHover: #005bb8;
+
+   /* Elements */
+   --buttonText: #ffffff;
+   --card: #ffffff;
+   --borders: #cfd6dc;
+   --icons: #0074e0;
+   --arrows: #6b7075;
+
+   /* Shadows & Effects */
+   --navShadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+   --cardBackgroundColor: #ffffff;
+   --cardBorderColor: #e2e6ea;
+   --cardShadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+   /* Buttons */
+   --buttonBackgroundColor: #0074e0;
+   --buttonTextColor: #ffffff;
+   --buttonHoverBackgroundColor: #005bb8;
+   --buttonActiveBackgroundColor: #004b9a;
+
+   /* Footer */
+   --footerBackgroundColor: #f1f3f5;
+   --footerText: #2c2f33;
+   --footerLinks: #0074e0;
+   --footerLinksHover: #005bb8;
+   --footerBorder: #d5dbe0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.darkMode {
+   /* Base Colors */
+   --backgroundColor: #0d1117;
+   --navBackgroundColor: #161b22;
+   --primaryText: #e6edf3;
+   --secondaryText: #8b949e;
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+   /* Accent / Highlights */
+   --accent: #3399ff;
+   --linkHover: #5ab1ff;
 
-.card {
-  padding: 2em;
-}
+   /* Elements */
+   --buttonText: #ffffff;
+   --card: #1c2128;
+   --borders: #30363d;
+   --icons: #58a6ff;
+   --arrows: #e6edf3;
 
-.read-the-docs {
-  color: #888;
+   /* Shadows & Effects */
+   --navShadow: 0px 0px 10px rgba(255, 255, 255, 0.05);
+   --cardBackgroundColor: #1c2128;
+   --cardBorderColor: #30363d;
+   --cardShadow: 0 2px 6px rgba(255, 255, 255, 0.03);
+
+   /* Buttons */
+   --buttonBackgroundColor: #238636;
+   --buttonTextColor: #ffffff;
+   --buttonHoverBackgroundColor: #2ea043;
+   --buttonActiveBackgroundColor: #1e662b;
+
+   /* Footer */
+   --footerBackgroundColor: #0d1117;
+   --footerText: #c9d1d9;
+   --footerLinks: #58a6ff;
+   --footerLinksHover: #79b8ff;
+   --footerBorder: #21262d;
 }
