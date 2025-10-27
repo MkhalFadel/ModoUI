@@ -1,0 +1,40 @@
+span{
+   font-family: 'Space Mono';
+}
+
+.codeWrapper {
+   position: relative;
+   margin-top: 1rem;
+   border-radius: 12px;
+   overflow: hidden;
+   width: 100%;
+}
+
+.copyBtn {
+   position: absolute;
+   right: 0.8rem;
+   top: 0.5rem;
+   padding: 4px 8px;
+   background: var(--surface, #222);
+   color: var(--text-primary, white);
+   border: 1px solid var(--border, #333);
+   border-radius: 6px;
+   cursor: pointer;
+   z-index: 1;
+}
+
+.copyBtn:hover {
+   opacity: 0.8;
+}
+
+.code {
+   padding: 1rem;
+   font-size: 1.2rem;   
+   flex-wrap: wrap;
+   overflow-x: auto;
+   border-radius: 12px;
+   height: 200px; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

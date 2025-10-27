@@ -1,0 +1,69 @@
+.toggleContainer,
+.checkboxContainer,
+.radioContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Space Mono', monospace;
+  cursor: pointer;
+}
+
+/* --- Toggle --- */
+.toggleTrack {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.toggleThumb {
+  position: absolute;
+  left: 3px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.toggleThumb.active {
+  left: calc(100% - 23px);
+}
+
+/* --- Checkbox --- */
+.checkboxBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.checkboxBox:hover {
+  filter: brightness(1.2);
+}
+
+.checkmark {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* --- Radio --- */
+.radioOuter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.radioOuter:hover {
+  filter: brightness(1.2);
+}
+
+.radioInner {
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* --- Shared --- */
+.label {
+  color: var(--text-color, white);
+  font-size: 0.95rem;
+}

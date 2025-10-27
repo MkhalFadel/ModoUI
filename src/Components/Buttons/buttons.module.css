@@ -1,0 +1,38 @@
+button {
+  cursor: pointer;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  transition: 0.25s ease;
+  font-weight: 600;
+}
+
+/* 🟦 Primary */
+.primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ⚫ Outline */
+.outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 🟣 Gradient */
+.gradient {
+  background-size: 200%;
+  background-position: left;
+}
+.gradient:hover {
+  background-position: right;
+  transform: scale(1.05);
+}
+
+/* 🧊 Glass */
+.glass {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+.glass:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.03);
+}

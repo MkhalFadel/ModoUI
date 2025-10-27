@@ -1,0 +1,77 @@
+.input {
+  padding: 0.6rem 1rem;
+  outline: none;
+  transition: 0.25s ease;
+  font-weight: 500;
+}
+
+.input:focus {
+  border-color: var(--accent-color, #4b6bfb);
+  box-shadow: 0 0 0 3px rgba(75, 107, 251, 0.2);
+}
+
+.input:hover {
+  transform: translateY(-1px);
+}
+
+
+.primary {
+  padding: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.primary:focus {
+  border-color: #007bff;
+}
+
+.outline {
+  padding: 10px;
+  border: 2px solid;
+  outline: none;
+  transition: 0.3s;
+}
+
+.outline:focus {
+  border-color: #0056b3;
+}
+
+.filled {
+  padding: 10px;
+  border: none;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.filled::placeholder
+{
+  color: white;
+}
+
+.filled:focus {
+  opacity: 0.9;
+}
+
+.underline {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid;
+  transition: 0.3s;
+}
+
+.underline:focus {
+  border-bottom-color: #007bff;
+}
+
+.glow {
+  padding: 10px;
+  outline: none;
+  border: 1px solid;
+  transition: 0.3s;
+}
+
+.glow:focus {
+  box-shadow: 0 0 15px currentColor;
+}

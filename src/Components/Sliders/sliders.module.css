@@ -1,0 +1,75 @@
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Space Mono', monospace;
+  color: white;
+}
+
+.label {
+  font-size: 0.9rem;
+  min-width: 70px;
+}
+
+.slider {
+  appearance: none;
+  height: 4px;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--thumb-color, #fff);
+  border: 2px solid var(--accent-color, #0d6efd);
+  transition: all 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.value {
+  font-size: 0.85rem;
+  width: 35px;
+  text-align: center;
+}
+
+/* --- Base Styles already exist --- */
+
+/* Flat */
+.flat {
+  background-color: #333;
+}
+
+/* Gradient */
+.gradient {
+  border-radius: 10px;
+  height: 5px;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+/* Neon */
+.neon::-webkit-slider-thumb {
+  background-color: #00ffff;
+  box-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff;
+}
+
+/* Glass */
+.glass {
+  backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.glass::-webkit-slider-thumb {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}

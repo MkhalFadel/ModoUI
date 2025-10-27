@@ -1,0 +1,133 @@
+@import "../../App.css";
+
+body{
+   background-color: var(--backgroundColor);
+}
+
+.container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   width: 100%;
+}
+
+.componentDisplay
+{
+   background-color: var(--navBackgroundColor);
+   box-shadow: var(--navShadow);
+   text-align: center;
+   width: 100%;
+   height: 100%;
+   max-width: 1200px;
+   max-height: 550px;
+   border-radius: 7px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.elTest{
+   border-radius: 7px;
+   background-color: var(--backgroundColor);
+   height: 50%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.elDisplay{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-items: center;
+   width: 50%;
+   height: 80%;
+}
+
+.codeSection{
+   width: 100%;
+}
+
+.installSection{
+   width: 95%;
+   margin-bottom: 15px;
+}
+
+.elStyles{
+   background-color: var(--backgroundColor);
+   height: 95%;
+   width: 40%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   border-radius: 7px;
+}
+
+h3{
+   margin-top: 15px;
+   font-size: 1.8rem;
+}
+
+.input{
+   margin: 0px 20px 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+}
+
+.inputs div input{
+   margin-top: 5px;
+   border: none;
+   outline: white;
+   background-color: var(--navBackgroundColor);
+   padding: 5px 15px;
+   border-radius: 5px;
+   font-size: 1rem;
+}
+
+table {
+   height: 50%;
+   width: 95%;
+   border-collapse: collapse;
+   margin-top: 1rem;
+   font-size: 0.95rem;
+   background-color: var(--bg-secondary, #1e1e1e);
+   color: var(--text, #eaeaea);
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+thead {
+   background-color: var(--accent, #4b6bfb);
+   color: #fff;
+   text-align: center;
+}
+
+th, td {
+   padding: 0.8rem 1rem;
+}
+
+tbody tr:nth-child(even) {
+   background-color: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover {
+   background-color: rgba(255, 255, 255, 0.1);
+   transition: background-color 0.25s ease;
+}
+
+th:first-child, td:first-child {
+   border-left: none;
+}
+
+th:last-child, td:last-child {
+   border-right: none;
+}
+
+td {
+   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
