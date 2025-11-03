@@ -1,52 +1,44 @@
 import { useEffect } from "react";
 import styles from "./buttons.module.css";
 
-export function PrimaryButton({ fontColor, fontSize, backgroundColor, text, setType }) {
-   useEffect(() => setType("button"), [setType]);
+export function PrimaryButton({ props, text }) {
 
    const style = {
-      color: fontColor,
-      fontSize,
-      backgroundColor,
+      color: props.color || "white",
+      backgroundColor: props.Background || "black",
       border: "none",
    };
 
    return <button style={style} className={styles.primary}>{text}</button>;
 }
 
-export function OutlineButton({ fontColor, fontSize, backgroundColor, text, setType }) {
-   useEffect(() => setType("button"), [setType]);
+export function OutlineButton({ props, text }) {
 
    const style = {
-      color: fontColor,
-      fontSize,
-      backgroundColor: "transparent",
-      border: `2px solid ${backgroundColor}`,
+      color: 'var(--primaryText)',
+      backgroundColor: props.backgroundColor || "transparent",
+      border: `2px solid ${props.backgroundColor}`,
    };
 
    return <button style={style} className={styles.outline}>{text}</button>;
 }
 
-export function GradientButton({ fontColor, fontSize, backgroundColor, text, setType }) {
-   useEffect(() => setType("button"), [setType]);
+export function GradientButton({ props, text }) {
 
    const style = {
-      color: fontColor,
-      fontSize,
-      backgroundImage: `linear-gradient(45deg, ${backgroundColor}, #4b0082)`,
+      color: props.color || "white",
+      backgroundImage: `linear-gradient(45deg, ${props.backgroundColor || "black"}, #4b0082)`,
       border: "none",
    };
 
    return <button style={style} className={styles.gradient}>{text}</button>;
 }
 
-export function GlassButton({ fontColor, fontSize, backgroundColor, text, setType }) {
-   useEffect(() => setType("button"), [setType]);
+export function GlassButton({ props, text }) {
 
    const style = {
-      color: fontColor,
-      fontSize,
-      backgroundColor: backgroundColor + "33", // transparent tint
+      color: props.color || "white",
+      backgroundColor: props.backgroundColor || + "33", // transparent tint
       border: "1px solid rgba(255, 255, 255, 0.3)",
       backdropFilter: "blur(8px)",
    };

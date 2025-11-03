@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./toggles.module.css";
 
-export function PrimaryToggle({ props, label = "Dark mode" }) {
-   const [isOn, setIsOn] = useState(false);
+export function PrimaryToggle({ props = {}, label = "Dark mode", checked, onChange }) {
+   const isControlled = checked !== undefined;
+   const [internal, setInternal] = useState(false);
+   const isOn = isControlled ? checked : internal;
 
-   const handleToggle = () => setIsOn(!isOn);
+   const handleToggle = () => {
+      const newValue = !isOn;
+      if (!isControlled) setInternal(newValue);
+      if (onChange) onChange(newValue);
+   };
 
    const style = {
       backgroundColor: isOn
@@ -13,12 +19,13 @@ export function PrimaryToggle({ props, label = "Dark mode" }) {
       width: props.width || "50px",
       height: props.height || "26px",
       borderRadius: props.borderRadius || "20px",
+      cursor: "pointer",
    };
 
    return (
       <label className={styles.toggleContainer}>
          <div className={styles.toggleTrack} style={style} onClick={handleToggle}>
-            <div
+         <  div
                className={`${styles.toggleThumb} ${isOn ? styles.active : ""}`}
                style={{
                   backgroundColor: props.thumbColor || "white",
@@ -27,73 +34,91 @@ export function PrimaryToggle({ props, label = "Dark mode" }) {
                }}
             />
          </div>
-         {label && <span className={styles.label}>{label}</span>}
-      </label>
-   );
+         {label && <span className={styles.label} style={{color: "var(--primaryText)"}}>{label}</span>}
+         </label>
+      );
 }
 
-export function PrimaryCheckbox({ props, label = "Cehckbox" }) {
-   const [checked, setChecked] = useState(false);
+export function PrimaryCheckbox({ props = {}, label = "Checkbox", checked, onChange }) {
+   const isControlled = checked !== undefined;
+   const [internal, setInternal] = useState(false);
+   const isChecked = isControlled ? checked : internal;
 
-   const handleCheck = () => setChecked(!checked);
+   const handleCheck = () => {
+      const newValue = !isChecked;
+      if (!isControlled) setInternal(newValue);
+      if (onChange) onChange(newValue);
+   };
 
    const style = {
       width: props.size || "20px",
       height: props.size || "20px",
       border: props.border || "2px solid #ccc",
-      backgroundColor: checked
-         ? props.activeColor || "#007bff"
-         : props.inactiveColor || "transparent",
+      backgroundColor: isChecked
+      ? props.activeColor || "#007bff"
+      : props.inactiveColor || "transparent",
       borderRadius: props.borderRadius || "4px",
+      cursor: "pointer",
    };
 
    return (
       <label className={styles.checkboxContainer}>
          <div
-            className={`${styles.checkboxBox} ${checked ? styles.checked : ""}`}
-            onClick={handleCheck}
-            style={style}
+         className={`${styles.checkboxBox} ${isChecked ? styles.checked : ""}`}
+         style={style}
+         onClick={handleCheck}
          >
-            {checked && <span className={styles.checkmark}>✓</span>}
+         {isChecked && <span className={styles.checkmark}>✓</span>}
          </div>
-         {label && <span className={styles.label}>{label}</span>}
+         {label && <span className={styles.label} style={{color: "var(--primaryText)"}}>{label}</span>}
       </label>
    );
 }
 
-export function PrimaryRadio({ props, label = "Accept" }) {
-   const [selected, setSelected] = useState(false);
+export function PrimaryRadio({ props = {}, label = "Option", checked, onChange, name }) {
+   const isControlled = checked !== undefined;
+   const [internal, setInternal] = useState(false);
+   const isSelected = isControlled ? checked : internal;
 
-   const handleSelect = () => setSelected(true);
+   const handleSelect = () => {
+   const newValue = true;
+      if (!isControlled) setInternal(newValue);
+      if (onChange) onChange(newValue);
+   };
 
-   const style = {
+   const outerStyle = {
       width: props.size || "20px",
       height: props.size || "20px",
-      border: props.border || "2px solid #ccc",
       borderRadius: "50%",
+      border: props.border || "2px solid #ccc",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: selected
-         ? props.activeColor || "#007bff"
-         : props.inactiveColor || "transparent",
+      backgroundColor: isSelected
+      ? props.activeColor || "#007bff"
+      : props.inactiveColor || "transparent",
+      cursor: "pointer",
+   };
+
+   const innerStyle = {
+      width: props.innerSize || "10px",
+      height: props.innerSize || "10px",
+      borderRadius: "50%",
+      backgroundColor: props.innerColor || "#fff",
    };
 
    return (
       <label className={styles.radioContainer}>
-         <div className={styles.radioOuter} onClick={handleSelect} style={style}>
-            {selected && (
-               <div
-                  className={styles.radioInner}
-                  style={{
-                     width: props.innerSize || "10px",
-                     height: props.innerSize || "10px",
-                     backgroundColor: props.innerColor || "#fff",
-                  }}
-               />
-            )}
-         </div>
-         {label && <span className={styles.label}>{label}</span>}
+      <div 
+         name={name}
+         className={styles.radioOuter} 
+         onClick={handleSelect} 
+         style={outerStyle}
+      >
+      {isSelected && <div className={styles.radioInner} style={innerStyle} />}
+      </div>
+
+      {label && <span className={styles.label} style={{color: "var(--primaryText)"}}>{label}</span>}
       </label>
    );
 }

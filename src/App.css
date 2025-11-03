@@ -5,19 +5,30 @@
    color: var(--primaryText);
 }
 
+
 :root {
    --fontPrimary: "Inter", sans-serif;
    --fontMono: "JetBrains Mono", monospace;
 
+   /* Grid Background (Light) */
+   --bg-base: #f9fafb;
+   --bg-gradient: linear-gradient(135deg, #f9fafb, #f3f4f6);
+   --grid-color: rgba(0, 0, 0, 0.185);
+
    /* Base Colors */
    --backgroundColor: #f7f9fb;
-   --navBackgroundColor: #cecece;
+   --navBackgroundColor: #c5c5c5;
+   --playgroundBackgroundColor: #cecece;
    --primaryText: #1c1f23;
    --secondaryText: #6b7075;
+   --placeholderTextColor: rgb(0, 0, 0);
+   --navTextColor: black;
 
    /* Accent / Highlights */
    --accent: #0074e0;
    --linkHover: #005bb8;
+   --navBorderColor: black;
+   
 
    /* Elements */
    --buttonText: #ffffff;
@@ -27,7 +38,7 @@
    --arrows: #6b7075;
 
    /* Shadows & Effects */
-   --navShadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+   --navShadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
    --cardBackgroundColor: #ffffff;
    --cardBorderColor: #e2e6ea;
    --cardShadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -46,16 +57,25 @@
    --footerBorder: #d5dbe0;
 }
 
-.darkMode {
+/* 🌙 DARK MODE OVERRIDES */
+body.darkMode {
+   --bg-base: #0d1117;
+   --bg-gradient: linear-gradient(135deg, #0d1117, #161b22);
+   --grid-color: rgba(255, 255, 255, 0.05);
+
    /* Base Colors */
    --backgroundColor: #0d1117;
-   --navBackgroundColor: #272e38;
+   --navBackgroundColor: #0d1117;
+   --playgroundBackgroundColor: #272e38;
    --primaryText: #e6edf3;
    --secondaryText: #8b949e;
+   --placeholderTextColor: rgb(158, 158, 158);
+   --navTextColor: white;
 
    /* Accent / Highlights */
    --accent: #3399ff;
    --linkHover: #5ab1ff;
+   --navBorderColor: white;
 
    /* Elements */
    --buttonText: #ffffff;
@@ -65,7 +85,7 @@
    --arrows: #e6edf3;
 
    /* Shadows & Effects */
-   --navShadow: 0px 0px 10px rgba(255, 255, 255, 0.05);
+   --navShadow: 0px 0px 10px rgba(255, 255, 255, 0.527);
    --cardBackgroundColor: #1c2128;
    --cardBorderColor: #30363d;
    --cardShadow: 0 2px 6px rgba(255, 255, 255, 0.03);
@@ -82,4 +102,16 @@
    --footerLinks: #58a6ff;
    --footerLinksHover: #79b8ff;
    --footerBorder: #21262d;
+}
+
+
+body {
+   background: 
+   linear-gradient(var(--grid-color) 1px, transparent 1px),
+   linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+   var(--bg-gradient);
+   background-size: 40px 40px;
+   background-attachment: fixed;
+   color: var(--primaryText);
+   transition: background 0.3s ease, color 0.3s ease;
 }

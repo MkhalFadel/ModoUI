@@ -7,6 +7,9 @@ import Playground from "./Pages/Playground/Playground";
 export default function App()
 {
   const [theme, setTheme] = useState("dark");
+  const [item, setItem] = useState("");
+  const [search, setSearch] = useState("");
+  const [page, setPage] = useState("homepage");
 
   useEffect(() => {
     const body = document.querySelector("body");
@@ -17,9 +20,9 @@ export default function App()
 
   return (
       <Routes>
-        <Route exact path="/" element={<Homepage />} />
-        <Route path="/Components" element={<Components />} />
-        <Route path="/Playground" element={<Playground theme={theme} setTheme={setTheme} />} />
+        <Route exact path="/" element={<Homepage theme={theme} setTheme={setTheme} page={page} setPage={setPage} />} />
+        <Route path="/Components" element={<Components theme={theme} setTheme={setTheme} page={page} setPage={setPage} item={item} setItem={setItem} search={search} setSearch={setSearch} />} />
+        <Route path="/Playground" element={<Playground theme={theme} setTheme={setTheme} page={page} setPage={setPage} item={item} />} />
       </Routes>
   )
 }

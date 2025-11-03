@@ -1,15 +1,18 @@
 import { useState } from "react";
 import styles from "./sliders.module.css";
 
-export function PrimarySlider({ props, text}) {
-   const [value, setValue] = useState(props.defaultValue || 50);
+export function PrimarySlider({ props, text, value, onChange }) {
+   const [userValue, setUserValue] = useState(value || 50)
 
-   const handleChange = (e) => {
-      setValue(e.target.value);
-      if (props.onChange) props.onChange(e);
-   };
+   function handleChange(e)
+   {
+      const newValue = e.target.value;
+      setUserValue(newValue);
+      onChange(newValue);
+   }
 
    const style = {
+      backgroundColor: 'var(--primaryText)',
       accentColor: props.accentColor || "#0d6efd",
       width: props.width || "200px",
       height: props.height || "4px",
@@ -22,19 +25,26 @@ export function PrimarySlider({ props, text}) {
             type="range"
             min={props.min || 0}
             max={props.max || 100}
-            value={value}
+            value={userValue}
             step={props.step || 1}
-            onChange={handleChange}
+            onChange={e => handleChange(e)}
             style={style}
             className={styles.slider}
          />
-         <span className={styles.value}>{value}</span>
+         <span className={styles.value} style={{color: "var(--primaryText)"}}>{userValue}</span>
       </div>
    );
 }
 
-export function SecondarySlider({ props, text }) {
-   const [value, setValue] = useState(props.defaultValue || 50);
+export function SecondarySlider({ props, text, value, onChange }) {
+   const [userValue, setUserValue] = useState(value || 50)
+
+   function handleChange(e)
+   {
+      const newValue = e.target.value;
+      setUserValue(newValue);
+      onChange(newValue);
+   }
 
    return (
       <div className={styles.sliderContainer}>
@@ -43,21 +53,28 @@ export function SecondarySlider({ props, text }) {
             type="range"
             min={props.min || 0}
             max={props.max || 100}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
+            value={userValue}
+            onChange={(e) => handleChange(e)}
             className={`${styles.slider} ${styles.flat}`}
             style={{
                accentColor: props.accentColor || "#28a745",
                width: props.width || "200px",
             }}
          />
-         <span className={styles.value}>{value}</span>
+         <span className={styles.value} style={{color: "var(--primaryText)"}}>{userValue}</span>
       </div>
    );
 }
 
-export function GradientSlider({ props, text }) {
-   const [value, setValue] = useState(props.defaultValue || 30);
+export function GradientSlider({ props, text, value, onChange }) {
+   const [userValue, setUserValue] = useState(value || 50)
+
+   function handleChange(e)
+   {
+      const newValue = e.target.value;
+      setUserValue(newValue);
+      onChange(newValue);
+   }
 
    const gradient = props.gradient || "linear-gradient(90deg, #ff00cc, #3333ff)";
 
@@ -68,21 +85,28 @@ export function GradientSlider({ props, text }) {
             type="range"
             min={props.min || 0}
             max={props.max || 100}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
+            value={userValue}
+            onChange={(e) => handleChange(e)}
             className={`${styles.slider} ${styles.gradient}`}
             style={{
                background: gradient,
                width: props.width || "200px",
             }}
          />
-         <span className={styles.value}>{value}</span>
+         <span className={styles.value} style={{color: "var(--primaryText)"}}>{userValue}</span>
       </div>
    );
 }
 
-export function NeonSlider({ props, text }) {
-   const [value, setValue] = useState(props.defaultValue || 70);
+export function NeonSlider({ props, text, value, onChange }) {
+   const [userValue, setUserValue] = useState(value || 50)
+
+   function handleChange(e)
+   {
+      const newValue = e.target.value;
+      setUserValue(newValue);
+      onChange(newValue);
+   }
 
    return (
       <div className={styles.sliderContainer}>
@@ -91,21 +115,29 @@ export function NeonSlider({ props, text }) {
             type="range"
             min={props.min || 0}
             max={props.max || 100}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
+            value={userValue}
+            onChange={(e) => handleChange(e)}
             className={`${styles.slider} ${styles.neon}`}
             style={{
+               backgroundColor: 'var(--primaryText)',
                accentColor: props.accentColor || "#00ffff",
                width: props.width || "200px",
             }}
          />
-         <span className={styles.value}>{value}</span>
+         <span className={styles.value} style={{color: "var(--primaryText)"}}>{userValue}</span>
       </div>
    );
 }
 
-export function GlassSlider({ props, text }) {
-   const [value, setValue] = useState(props.defaultValue || 45);
+export function GlassSlider({ props, text, value, onChange }) {
+   const [userValue, setUserValue] = useState(value|| 50);
+
+   function handleChange(e)
+   {
+      const newValue = e.target.value;
+      setUserValue(newValue);
+      onChange(newValue);
+   }
 
    return (
       <div className={styles.sliderContainer}>
@@ -114,15 +146,16 @@ export function GlassSlider({ props, text }) {
             type="range"
             min={props.min || 0}
             max={props.max || 100}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
+            value={userValue}
+            onChange={(e) => handleChange(e)}
             className={`${styles.slider} ${styles.glass}`}
             style={{
+               backgroundColor: 'var(--primaryText)',
                accentColor: props.accentColor || "#9b59b6",
                width: props.width || "200px",
             }}
          />
-         <span className={styles.value}>{value}</span>
+         <span className={styles.value} style={{color: "var(--primaryText)"}}>{userValue}</span>
       </div>
    );
 }

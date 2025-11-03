@@ -1,0 +1,65 @@
+@import '../../App.css';
+
+.footer{
+   background-color: var(--backgroundColor);
+   width: 100%;
+   height: 200px;
+   box-shadow: var(--navShadow);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   bottom: 0;
+}
+
+.left{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;   
+   height: 100%;
+}
+
+.logo{
+   width: 250px;
+   height: 195px;
+   object-fit: contain;
+   margin-bottom: -70px;
+}
+
+.left p{
+   margin-bottom: 70px;
+   color: var(--primaryText);
+}
+
+.right
+{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 100%;
+   width: 30%;
+   margin-right: 50px;
+}
+
+.pages, .projects{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center
+}
+
+.right *{
+   text-decoration: none;
+   margin-bottom: 10px;
+   color: var(--primaryText);
+}
+
+.right a{
+   color: grey;
+   transition: all ease-in-out 0.15s;
+}
+
+.right a:hover{
+   color: #58a7e7;
+}

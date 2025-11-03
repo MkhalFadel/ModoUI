@@ -1,7 +1,7 @@
 @import "../../App.css";
 
-body{
-   background-color: var(--backgroundColor);
+*{
+   color: white;
 }
 
 .container{
@@ -14,7 +14,7 @@ body{
 
 .componentDisplay
 {
-   background-color: var(--navBackgroundColor);
+   background-color: var(--playgroundBackgroundColor);
    box-shadow: var(--navShadow);
    text-align: center;
    width: 100%;
@@ -29,7 +29,7 @@ body{
 
 .elTest{
    border-radius: 7px;
-   background-color: var(--backgroundColor);
+   background-color: #0d1117;
    height: 50%;
    width: 100%;
    display: flex;
@@ -56,7 +56,7 @@ body{
 }
 
 .elStyles{
-   background-color: var(--backgroundColor);
+   background-color: #0d1117;
    height: 95%;
    width: 40%;
    display: flex;
@@ -109,6 +109,7 @@ thead {
 
 th, td {
    padding: 0.8rem 1rem;
+   color: white;
 }
 
 tbody tr:nth-child(even) {

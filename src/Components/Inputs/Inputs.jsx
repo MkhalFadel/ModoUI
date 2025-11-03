@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styles from "./inputs.module.css";
 
-export function PrimaryInput({text, props, onChange}) 
+export function PrimaryInput({text, props, onChange, value}) 
 {
    const style = {
       color: props.color || "white",
@@ -13,11 +13,17 @@ export function PrimaryInput({text, props, onChange})
    };
 
    return (
-      <input type="text" className={styles.input} placeholder={text || "Enter Text..."} style={style} />
+      <input 
+         value={value}
+         onChange={e => onChange(e.target.value)}
+         type="text" 
+         className={styles.input} 
+         placeholder={text || "Enter Text..."} 
+         style={style} />
    );
 }
 
-export function OutlineInput({ text, props, onChange }) {
+export function OutlineInput({ text, props, onChange, value }) {
    const style = {
       color: props.color || "white",
       backgroundColor: props.backgroundColor || "transparent",
@@ -29,6 +35,7 @@ export function OutlineInput({ text, props, onChange }) {
 
    return (
       <input
+         value={value}
          type="text"
          className={styles.outline}
          placeholder={text || "Enter text..."}
@@ -38,7 +45,7 @@ export function OutlineInput({ text, props, onChange }) {
    );
 }
 
-export function FilledInput({ text, props, onChange }) {
+export function FilledInput({ text, props, onChange, value }) {
    const style = {
       color: props.color || "white",
       backgroundColor: props.backgroundColor || "#007bff",
@@ -50,6 +57,7 @@ export function FilledInput({ text, props, onChange }) {
 
    return (
       <input
+         value={value}
          type="text"
          className={styles.filled}
          placeholder={text || "Enter text..."}
@@ -59,7 +67,7 @@ export function FilledInput({ text, props, onChange }) {
    );
 }
 
-export function UnderlineInput({ text, props, onChange }) {
+export function UnderlineInput({ text, props, onChange, value }) {
    const style = {
       color: props.color || "white",
       backgroundColor: props.backgroundColor || "transparent",
@@ -72,6 +80,7 @@ export function UnderlineInput({ text, props, onChange }) {
 
    return (
       <input
+         value={value}
          type="text"
          className={styles.underline}
          placeholder={text || "Enter text..."}
@@ -81,7 +90,7 @@ export function UnderlineInput({ text, props, onChange }) {
    );
 }
 
-export function GlowInput({ text, props, onChange }) {
+export function GlowInput({ text, props, onChange, value }) {
    const style = {
       color: props.color || "white",
       backgroundColor: props.backgroundColor || "#111",
@@ -94,6 +103,7 @@ export function GlowInput({ text, props, onChange }) {
 
    return (
       <input
+         value={value}
          type="text"
          className={styles.glow}
          placeholder={text || "Enter text..."}

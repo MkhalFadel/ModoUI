@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './playground.module.css'
+import NavBar from '../../Components/NavBar/NavBar.jsx';
 import * as buttons from '../../Components/Buttons/Buttons.jsx';
 import * as loaders from '../../Components/Loaders/Loaders.jsx'
 import * as inputs from '../../Components/Inputs/Inputs.jsx';
@@ -8,20 +9,23 @@ import * as toggles from '../../Components/Toggles/Toggles.jsx';
 import * as sliders from '../../Components/Sliders/Sliders.jsx';
 import CodeBlock from '../../Components/CodeBlock/CodeBlock';
 
-export default function Playground({theme, setTheme})
+export default function Playground({ item, page, setPage, theme, setTheme })
 { 
-   const [text, setText] = useState("");
-   const [type, setType] = useState("button");
-   const props = {}
-   const codeString = `<PrimaryAlert props={props} text={text}/>`   
+
+   useEffect(() => {
+      setPage("playGround")
+   }, [])
+
+   const codeString = item.display;   
    const installString = `npm install modoUI`;
 
    return (
       <main className={styles.container}>
+         <NavBar page={page} theme={theme} setTheme={setTheme} />
          <div className={styles.componentDisplay}>
             <div className={styles.elDisplay}>
                <div className={styles.elTest}>
-                  <sliders.GlassSlider text={text} props={props} />
+                  {item.component}
                </div>
                <div className={styles.codeSection}>
                   <CodeBlock code={codeString} showLineNumbers={true} />
@@ -50,12 +54,18 @@ export default function Playground({theme, setTheme})
                         <th>{"{ }"}</th>
                         <th>Styles</th>
                      </tr>
-                     {(type === "button" || type === "input") && (<tr>
-                        <td>{type ==='button' ? "onClick" : "onChange"}</td>
+                     {(item.type === "button" || item.type === "input") && (<tr>
+                        <td>{item.type ==='button' ? "onClick" : "onChange"}</td>
                         <th>function</th>
                         <th>undefined</th>
                         <th>Pass a function</th>
                      </tr>)}
+                     {item.type === 'toggle' && <tr>
+                        <td>Name</td>
+                        <th>attribute</th>   
+                        <th>undefined</th>   
+                        <th>Pass a name to prevent Multiple answers if needed</th>   
+                     </tr>}
                   </tbody>
                </table>
                <div className={styles.installSection}>
