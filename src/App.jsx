@@ -16,8 +16,6 @@ export default function App()
     theme === 'dark' ? body.classList.add("darkMode") : body.classList.remove("darkMode")
   }, [theme])
 
-  console.log(theme)
-
   return (
       <Routes>
         <Route exact path="/" element={<Homepage theme={theme} setTheme={setTheme} page={page} setPage={setPage} />} />

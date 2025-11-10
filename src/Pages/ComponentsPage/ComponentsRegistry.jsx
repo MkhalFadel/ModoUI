@@ -113,6 +113,13 @@ export const componentsList = [
    },
 
    {
+      name: "DottedLoader",
+      component: <loaders.DottedLoader props={""} />,
+      display: `<DottedLoader props={props} />`,
+      type: "loader"
+   },
+
+   {
       name: "DualRingLoader",
       component: <loaders.DualRingLoader props={""} />,
       display: `<DualRingLoader props={props} />`,
@@ -197,3 +204,8 @@ export const componentsList = [
    },
 ]
 
+for(let i = componentsList.length - 1; i > 0; i-- )
+{
+   const j = Math.floor(Math.random() * (i + 1));
+   [componentsList[i], componentsList[j]] = [componentsList[j], componentsList[i]];
+}

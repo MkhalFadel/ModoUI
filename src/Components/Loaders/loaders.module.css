@@ -1,6 +1,18 @@
 @keyframes spin {
-  to {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
     transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg);
   }
 }
 
@@ -15,7 +27,7 @@
 }
 
 /* 1. Circle Loader */
-.circleLoader {
+.circleLoader, .dottedLoader {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -23,20 +35,37 @@
 }
 
 /* 2. Dual Ring Loader */
-.dualRing {
-  display: inline-block;
+.dualRingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   width: 60px;
   height: 60px;
 }
-.dualRing div {
-  box-sizing: border-box;
-  display: block;
+
+.innerRing,
+.outerRing {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border: 5px solid;
   border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.outerRing {
   animation: spin 1.2s linear infinite;
-  border-color: #ccc transparent transparent transparent;
+  width: 130%;
+  height: 130%;
+}
+
+/* Inner spins counterclockwise */
+.innerRing {
+  animation: spinReverse 1.2s linear infinite;
+  left: 9px;
+  top: 8px;
 }
 
 /* 3. Dot Pulse Loader */
@@ -46,6 +75,7 @@
   justify-content: center;
   gap: 0.4rem;
 }
+
 .dotPulse div {
   width: 12px;
   height: 12px;
@@ -93,5 +123,8 @@
   animation: bounce 0.6s ease-in-out infinite;
 }
 .bounce div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.bounce div:nth-child(4) {
   animation-delay: 0.3s;
 }

@@ -16,10 +16,13 @@
 }
 
 .returnBtn button{
-   background-color: #0074e0;
+   background-color: #0074e0;;
    border: none;
-   color: white;
    font-size: 1.1rem;
+}
+
+.returnBtn button:hover{
+   scale: 1.2;
 }
 
 .search{
