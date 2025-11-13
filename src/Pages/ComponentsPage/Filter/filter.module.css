@@ -1,0 +1,44 @@
+.filters{
+   margin: 85px auto 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+
+.filters button{
+   background-image: linear-gradient(45deg, rgb(0, 119, 255), #7200c4);
+   background-size: 200%;
+   background-position: left;
+   backdrop-filter: blur(8px);
+   border: none;
+   margin-right: 25px;
+   cursor: pointer;
+}
+
+.filters button:hover{
+   background-position: right;
+   transform: scale(1.05);
+}
+
+.clicked{
+   border: 1px solid white !important;
+   transform: scale(1.05);
+}
+
+.optionsContianer{
+   margin-top: 85px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 100%;
+}
+
+.filterOptions{
+   background-color: #0074e0;
+   border: none;
+   border-radius: 7px;
+   font-size: 1.2rem;
+   padding: 5px 15px;
+   width: 40%;
+}

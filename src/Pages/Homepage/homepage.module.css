@@ -9,6 +9,10 @@ h2{
    color: var(--primaryText);
 }
 
+.container{
+   overflow: hidden;
+}
+
 .logoContainer
 {
    display: flex;
@@ -110,7 +114,6 @@ h1{
 .installationContainer h2{
    font-size: 2.5rem;
    margin-bottom: 10px;
-   
 }
 
 .code{
@@ -143,4 +146,80 @@ h1{
 
 .codeBlock{
    color: white;
+}
+
+@media (max-width: 480px){
+   .logoContainer{
+      margin-right: 70px;
+   }
+
+   .description{
+      font-size: 0.9rem;
+   }
+
+   .links{
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      margin-left: 5px;
+   }
+}
+
+@media (max-width: 768px){
+   .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .logoContainer{
+      margin-top: 0px;
+   }
+
+   .logo{
+      width: 230px;
+      height: 230px;
+   }
+
+   .titleContainer{
+      margin-left: -50px;
+   }
+
+   h1{font-size: 2.5rem;}
+
+   .links{
+      margin-top: -30px; 
+   }
+
+   .featuresContainer h2{
+      text-align: center;
+      width: 100%;
+      margin: 0 auto 10px;
+   }
+
+   .features{
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   .features div{
+      width: 85%;
+   }
+
+   .installationContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0px;
+   }
+
+   .installationContainer * {
+      width: 90%;
+   }
+
+   .installationContainer h2{text-align: center;}
+
+   .code button{
+      max-width: 40%;
+   }
 }

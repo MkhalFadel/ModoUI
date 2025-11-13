@@ -63,3 +63,17 @@
 .right a:hover{
    color: #58a7e7;
 }
+
+@media (max-width: 768px){
+   .footer{
+      flex-direction: column;
+      height: fit-content;
+   }
+
+   .right{
+      align-items: baseline;
+      justify-content: space-around;
+      width: 100%;
+      margin-right: 0;
+   }
+}

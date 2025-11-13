@@ -1,6 +1,6 @@
 import styles from './footer.module.css'
-import Logo from '../../assets/ModoUILogo.png'
-import LogoDark from '../../assets/ModoUILogoDark.png'
+import Logo from '../../assets/ModoUILogo.svg'
+import LogoDark from '../../assets/ModoUILogoDark.svg'
 import { Link } from 'react-router-dom'
 
 export default function Footer({theme})

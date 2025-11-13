@@ -1,6 +1,6 @@
 import styles from './homepage.module.css'
 import { useEffect } from 'react'
-import Logo from "../../assets/ModoUI.png"
+import Logo from "../../assets/ModoUI.svg"
 import { Link } from 'react-router-dom'
 import NavBar from '../../Components/NavBar/NavBar'
 import Footer from '../../Components/Footer/Footer'

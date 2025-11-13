@@ -10,6 +10,16 @@ span{
    width: 100%;
 }
 
+pre[class*="language-"] {
+   height: 200px;
+   width: 100%;
+   max-width: 100%;
+   overflow-x: auto;
+   white-space: pre-wrap;
+   word-wrap: break-word;
+   box-sizing: border-box;
+}
+
 .copyBtn {
    position: absolute;
    right: 0.8rem;
@@ -33,8 +43,24 @@ span{
    flex-wrap: wrap;
    overflow-x: auto;
    border-radius: 12px;
-   height: 200px; 
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+@media (max-width: 768px){
+   .codeBlock, pre[class*="language-"] {
+      font-size: 0.9rem;
+      padding: 0.9rem;
+      height: auto;
+   }
+   
+   .code{
+      display: block;
+      width: 100%;
+   }
+
+   .copyBtn{
+      top: 12px;
+   }
 }

@@ -71,26 +71,11 @@ h3{
    font-size: 1.8rem;
 }
 
-.input{
-   margin: 0px 20px 10px;
-   display: flex;
-   flex-direction: column;
-   align-items: start;
-}
-
-.inputs div input{
-   margin-top: 5px;
-   border: none;
-   outline: white;
-   background-color: var(--navBackgroundColor);
-   padding: 5px 15px;
-   border-radius: 5px;
-   font-size: 1rem;
-}
-
 table {
    height: 50%;
    width: 95%;
+   table-layout: fixed;
+   min-width: 90%;
    border-collapse: collapse;
    margin-top: 1rem;
    font-size: 0.95rem;
@@ -131,4 +116,44 @@ th:last-child, td:last-child {
 
 td {
    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px){
+
+   .componentDisplay{
+      flex-direction: column;
+      width: 95%;
+      border: none;
+      box-shadow: none;
+      max-width: none;
+      max-width: none;
+   }
+
+   .elStyles{
+      background-color: transparent;
+   }
+
+   .elDisplay{
+      margin-top: 20px;
+      height: 100%;
+      width: 95%;
+   }
+
+   .elTest{
+      width: 100%;
+   }
+
+   .elStyles{
+      width: 90%;
+   }
+
+   .elStyles table{
+      max-width: 95%;
+      table-layout: fixed;
+   }
+
+   .codeSection, .installSection{
+      width: 100%;
+      text-align: start;
+   }
 }

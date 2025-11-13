@@ -33,6 +33,12 @@ export default function Playground({ item, page, setPage, theme, setTheme })
             </div>
             <div className={styles.elStyles}>
                <table>
+                  <colgroup>
+                     <col style={{ width: "25%" }} />
+                     <col style={{ width: "20%" }} />
+                     <col style={{ width: "25%" }} />
+                     <col style={{ width: "30%" }} />
+                  </colgroup>
                   <thead>
                      <tr>
                         <th>Prop</th>

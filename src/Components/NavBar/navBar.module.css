@@ -1,6 +1,7 @@
 @import '../../App.css';
 
 .navBar{
+   overflow: hidden;
    position: fixed;
    top: 0;
    margin-top: 15px;
@@ -14,15 +15,38 @@
 .returnBtn{
    margin-left: 25px;
 }
-
 .returnBtn button{
-   background-color: #0074e0;;
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   padding: 0.6rem 1.1rem;
+   background-image: linear-gradient(45deg, rgb(0, 119, 255), #7200c4);
+   color: var(--buttonTextColor);
    border: none;
-   font-size: 1.1rem;
+   border-radius: 8px;
+   font-size: 1rem;
+   font-weight: 500;
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.returnBtn button:hover{
-   scale: 1.2;
+.returnBtn button:hover {
+   background-position: right;
+   transform: translateY(-1px);
+   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.returnBtn button:active {
+   transform: translateY(0);
+}
+
+.icon {
+   transition: all 0.2s ease;
+}
+
+.returnBtn button:hover .icon {
+   transform: translateX(-3px);
 }
 
 .search{
@@ -64,4 +88,29 @@
    width: 50px;
    height: 50px;
    object-fit: contain;
+}
+
+@media (max-width: 768px){
+   .navBar{
+      justify-content: space-between;
+   }
+
+   .returnBtn{
+      margin-left: 7px;
+   }
+
+   .returnBtn button{
+      font-size: 0.9rem;
+      padding: 0.5rem 0.9rem;
+      gap: 6px;
+   }
+
+   .darkMode{
+      margin-right: 7px;
+   }
+   
+   .search{
+      flex: 0;
+      max-width: 170px;
+   }
 }
