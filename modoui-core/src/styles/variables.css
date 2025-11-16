@@ -1,0 +1,97 @@
+:root {
+   --fontPrimary: "Inter", sans-serif;
+   --fontMono: "JetBrains Mono", monospace;
+
+   /* Grid Background (Light) */
+   --bg-base: #f9fafb;
+   --bg-gradient: linear-gradient(135deg, #f9fafb, #f3f4f6);
+   --grid-color: rgba(0, 0, 0, 0.185);
+
+   /* Base Colors */
+   --backgroundColor: #f7f9fb;
+   --navBackgroundColor: #c5c5c5;
+   --playgroundBackgroundColor: #cecece;
+   --primaryText: #1c1f23;
+   --secondaryText: #6b7075;
+   --placeholderTextColor: rgb(0, 0, 0);
+   --navTextColor: black;
+
+   /* Accent / Highlights */
+   --accent: #0074e0;
+   --linkHover: #005bb8;
+   --navBorderColor: black;
+   
+
+   /* Elements */
+   --buttonText: #ffffff;
+   --card: #ffffff;
+   --borders: #cfd6dc;
+   --icons: #0074e0;
+   --arrows: #6b7075;
+
+   /* Shadows & Effects */
+   --navShadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+   --cardBackgroundColor: #ffffff;
+   --cardBorderColor: #e2e6ea;
+   --cardShadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+   /* Buttons */
+   --buttonBackgroundColor: #0074e0;
+   --buttonTextColor: #ffffff;
+   --buttonHoverBackgroundColor: #005bb8;
+   --buttonActiveBackgroundColor: #004b9a;
+
+   /* Footer */
+   --footerBackgroundColor: #f1f3f5;
+   --footerText: #2c2f33;
+   --footerLinks: #0074e0;
+   --footerLinksHover: #005bb8;
+   --footerBorder: #d5dbe0;
+}
+
+/* 🌙 DARK MODE OVERRIDES */
+body.darkMode {
+   --bg-base: #0d1117;
+   --bg-gradient: linear-gradient(135deg, #0d1117, #161b22);
+   --grid-color: rgba(255, 255, 255, 0.05);
+
+   /* Base Colors */
+   --backgroundColor: #0d1117;
+   --navBackgroundColor: #0d1117;
+   --playgroundBackgroundColor: #272e38;
+   --primaryText: #e6edf3;
+   --secondaryText: #8b949e;
+   --placeholderTextColor: rgb(158, 158, 158);
+   --navTextColor: white;
+
+   /* Accent / Highlights */
+   --accent: #3399ff;
+   --linkHover: #5ab1ff;
+   --navBorderColor: white;
+
+   /* Elements */
+   --buttonText: #ffffff;
+   --card: #1c2128;
+   --borders: #30363d;
+   --icons: #58a6ff;
+   --arrows: #e6edf3;
+
+   /* Shadows & Effects */
+   --navShadow: 0px 0px 10px rgba(255, 255, 255, 0.527);
+   --cardBackgroundColor: #1c2128;
+   --cardBorderColor: #30363d;
+   --cardShadow: 0 2px 6px rgba(255, 255, 255, 0.03);
+
+   /* Buttons */
+   --buttonBackgroundColor: #238636;
+   --buttonTextColor: #ffffff;
+   --buttonHoverBackgroundColor: #2ea043;
+   --buttonActiveBackgroundColor: #1e662b;
+
+   /* Footer */
+   --footerBackgroundColor: #0d1117;
+   --footerText: #c9d1d9;
+   --footerLinks: #58a6ff;
+   --footerLinksHover: #79b8ff;
+   --footerBorder: #21262d;
+}

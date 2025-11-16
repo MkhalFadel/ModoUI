@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import styles from './playground.module.css'
 import NavBar from '../../Components/NavBar/NavBar.jsx';
-import * as buttons from '../../Components/Buttons/Buttons.jsx';
-import * as loaders from '../../Components/Loaders/Loaders.jsx'
-import * as inputs from '../../Components/Inputs/Inputs.jsx';
-import * as alerts from '../../Components/Alerts/Alerts.jsx';
-import * as toggles from '../../Components/Toggles/Toggles.jsx';
-import * as sliders from '../../Components/Sliders/Sliders.jsx';
-import CodeBlock from '../../Components/CodeBlock/CodeBlock';
+import * as buttons from '../../../../modoui-core/src/libraryComponents/Buttons/Buttons.jsx';
+import * as loaders from '../../../../modoui-core/src/libraryComponents/Loaders/Loaders.jsx'
+import * as inputs from '../../../../modoui-core/src/libraryComponents/Inputs/Inputs.jsx';
+import * as alerts from '../../../../modoui-core/src/libraryComponents/Alerts/Alerts.jsx';
+import * as toggles from '../../../../modoui-core/src/libraryComponents/Toggles/Toggles.jsx';
+import * as sliders from '../../../../modoui-core/src/libraryComponents/Sliders/Sliders.jsx';
+import CodeBlock from '../../Components/CodeBlock/CodeBlock.jsx';
 
 export default function Playground({ item, page, setPage, theme, setTheme })
 { 
@@ -17,7 +17,7 @@ export default function Playground({ item, page, setPage, theme, setTheme })
    }, [])
 
    const codeString = item.display;   
-   const installString = `npm install modoUI`;
+   const installString = `npm install @mkhalfadel/modoui-core`;
 
    return (
       <main className={styles.container}>

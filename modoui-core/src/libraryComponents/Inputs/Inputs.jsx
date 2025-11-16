@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styles from "./inputs.module.css";
 
 export function PrimaryInput({text, props, onChange, value}) 

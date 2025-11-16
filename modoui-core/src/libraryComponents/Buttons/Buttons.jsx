@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styles from "./buttons.module.css";
 
 export function PrimaryButton({ props, text }) {

@@ -17,7 +17,7 @@ export function PrimaryAlert({ text, props }) {
    return (
       <div className={styles.alert} style={style}>
          <span className={styles.icon}>ℹ️</span>
-         <p className={styles.message} style={{color: "var(--primaryText)"}}>{text || "This is a primary alert!"}</p>
+         <p className={styles.message} style={{color: props.color || "var(--primaryText)"}}>{text || "This is a primary alert!"}</p>
       </div>
    );
 }
@@ -39,7 +39,7 @@ export function SuccessAlert({ text, props }) {
    return (
       <div className={styles.alert} style={style}>
          <span className={styles.icon}>✅</span>
-         <p className={styles.message} style={{color: "var(--primaryText)"}}>{text || "Action completed successfully!"}</p>
+         <p className={styles.message} style={{color: props.color || "var(--primaryText)"}}>{text || "Action completed successfully!"}</p>
       </div>
    );
 }
@@ -62,7 +62,7 @@ export function WarningAlert({ text, props }) {
    return (
       <div className={styles.alert} style={style}>
          <span className={styles.icon}>⚠️</span>
-         <p className={styles.message} style={{color: "var(--primaryText)"}}>{text || "Be careful with this action!"}</p>
+         <p className={styles.message} style={{color: props.color || "var(--primaryText)"}}>{text || "Be careful with this action!"}</p>
       </div>
    );
 }
@@ -85,7 +85,7 @@ export function ErrorAlert({ text, props }) {
    return (
       <div className={styles.alert} style={style}>
          <span className={styles.icon}>❌</span>
-         <p className={styles.message} style={{color: "var(--primaryText)"}}>{text || "Something went wrong!"}</p>
+         <p className={styles.message} style={{color: props.color || "var(--primaryText)"}}>{text || "Something went wrong!"}</p>
       </div>
    );
 }
@@ -107,7 +107,7 @@ export function InfoAlert({ text, props }) {
    return (
       <div className={styles.alert} style={style}>
          <span className={styles.icon}>💡</span>
-         <p className={styles.message} style={{color: "var(--primaryText)"}}>{text || "Here’s some helpful information."}</p>
+         <p className={styles.message} style={{color: props.color || "var(--primaryText)"}}>{text || "Here’s some helpful information."}</p>
       </div>
    );
 }

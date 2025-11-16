@@ -13,11 +13,15 @@ export default function Homepage({theme, setTheme, page, setPage})
       setPage("home")
    }, [])
 
+   function click()
+   {
+      alert("hello there")
+   }
+
    return (
       <main className={styles.container}>
 
          <NavBar theme={theme} setTheme={setTheme} page={page} />
-
          <div className={styles.logoContainer}>
             <img src={Logo} alt="ModoUILogo" className={styles.logo} />
             <div className={styles.titleContainer}>
@@ -53,7 +57,7 @@ export default function Homepage({theme, setTheme, page, setPage})
             <h2 id="installation">Installation</h2>
             <div className={styles.code}>
                <p style={{wordSpacing: "10px", color: "white"}}>
-                  <span style={{color: "#E06C75"}}>npm</span> install <span style={{color: "#61AFEF"}}>ModoUI</span>
+                  <span style={{color: "#E06C75"}}>npm</span> install <span style={{color: "#61AFEF"}}>@mkhalfadel/modoui-core</span>
                </p>
                <button onClick={() => navigator.clipboard.writeText("npm install modoUI")}>Copy</button>
             </div>
@@ -61,7 +65,7 @@ export default function Homepage({theme, setTheme, page, setPage})
             <div className={styles.code}>
                <pre>
                   <code className={styles.codeBlock}>
-                     import {'{'} <span style={{color: "#E06C75"}}>PrimaryButton</span> {'}'} from <span style={{color: "#61AFEF"}}>"modoui"</span>;
+                     import {'{'} <span style={{color: "#E06C75"}}>PrimaryButton</span> {'}'} from <span style={{color: "#61AFEF"}}>"@mkhalfadel/modoui-core"</span>;
                      <br /><br />      
                      export default function App( ) {'{'}
                      <br />
