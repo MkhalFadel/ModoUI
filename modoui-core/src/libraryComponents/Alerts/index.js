@@ -3,3 +3,8 @@ export {SuccessAlert} from './Alerts.jsx';
 export {WarningAlert} from './Alerts.jsx';
 export {ErrorAlert} from './Alerts.jsx';
 export {InfoAlert} from './Alerts.jsx';
+export {DarkAlert} from './Alerts.jsx';
+export {GlassAlert} from './Alerts.jsx';
+export {GradientAlert} from './Alerts.jsx';
+export {MinimalAlert} from './Alerts.jsx';
+export {SecondaryAlert} from './Alerts.jsx';

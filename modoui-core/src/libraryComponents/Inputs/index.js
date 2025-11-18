@@ -3,3 +3,8 @@ export {FilledInput} from './Inputs.jsx';
 export {GlowInput} from './Inputs.jsx';
 export {OutlineInput} from './Inputs.jsx';
 export {UnderlineInput} from './Inputs.jsx';
+export {GlassInput} from './Inputs.jsx';
+export {NeonPulseInput} from './Inputs.jsx';
+export {ShadowInput} from './Inputs.jsx';
+export {TerminalInput} from './Inputs.jsx';
+export {RoundedInput} from './Inputs.jsx';

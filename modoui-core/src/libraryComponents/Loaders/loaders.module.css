@@ -26,6 +26,53 @@
   50% { transform: translateY(-15px); }
 }
 
+@keyframes squareSpinAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes waveBarsAnim {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+
+@keyframes typingDotsAnim {
+  0%, 100% { opacity: 0.3; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-5px); }
+}
+
+@keyframes flipCardAnim {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rippleAnim {
+  0% {
+    transform: scale(0.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+
 /* 1. Circle Loader */
 .circleLoader, .dottedLoader {
   width: 50px;
@@ -127,4 +174,70 @@
 }
 .bounce div:nth-child(4) {
   animation-delay: 0.3s;
+}
+
+.squareSpin {
+  animation: squareSpinAnim 1s linear infinite;
+}
+
+.waveBars {
+  display: flex;
+  align-items: end;
+  gap: 5px;
+}
+
+.waveBars div {
+  animation: waveBarsAnim 0.9s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+.waveBars div:nth-child(1) { animation-delay: 0s; }
+.waveBars div:nth-child(2) { animation-delay: 0.1s; }
+.waveBars div:nth-child(3) { animation-delay: 0.2s; }
+.waveBars div:nth-child(4) { animation-delay: 0.3s; }
+.waveBars div:nth-child(5) { animation-delay: 0.4s; }
+
+.typingDots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.typingDots div {
+  border-radius: 50%;
+  animation: typingDotsAnim 0.8s infinite ease-in-out;
+}
+
+.typingDots div:nth-child(1) { animation-delay: 0s; }
+.typingDots div:nth-child(2) { animation-delay: 0.15s; }
+.typingDots div:nth-child(3) { animation-delay: 0.3s; }
+
+.flipCard {
+  perspective: 1000px;
+}
+
+.flipInner {
+  animation: flipCardAnim 1.2s infinite ease-in-out;
+  border-radius: 6px;
+}
+
+.ripple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.ripple div {
+  position: absolute;
+  border: 3px solid;
+  border-radius: 50%;
+  opacity: 1;
+  animation: rippleAnim 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.ripple div:nth-child(2) {
+  animation-delay: -0.75s;
 }

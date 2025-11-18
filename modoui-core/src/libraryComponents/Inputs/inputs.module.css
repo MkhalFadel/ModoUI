@@ -75,3 +75,83 @@
 .glow:focus {
   box-shadow: 0 0 15px currentColor;
 }
+
+.rounded {
+  padding: 10px 16px;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.rounded:focus {
+  border-color: #555;
+  background-color: #eaeaea;
+}
+
+.glass {
+  padding: 10px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.glass:focus {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.shadow {
+  padding: 10px 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  outline: none;
+}
+
+.shadow:focus {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  border-color: #444;
+}
+
+.terminal {
+  background-color: #111;
+  color: #00ff66;
+  border: 2px solid #00ff66;
+  font-family: "Courier New", monospace;
+  padding: 10px 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.terminal:focus {
+  background-color: #000;
+  box-shadow: 0 0 8px #00ff66;
+}
+
+.neonPulse {
+  padding: 10px 14px;
+  background-color: #0a0a0a;
+  color: #fff;
+  border: 2px solid #ff00ff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  outline: none;
+  animation: neonPulseGlow 1.8s infinite ease-in-out;
+}
+
+@keyframes neonPulseGlow {
+  0% {
+      box-shadow: 0 0 6px #ff00ff;
+  }
+  50% {
+      box-shadow: 0 0 16px #ff00ff;
+  }
+  100% {
+      box-shadow: 0 0 6px #ff00ff;
+  }
+}
+
+.neonPulse:focus {
+  border-color: #ff66ff;
+  box-shadow: 0 0 18px #ff66ff;
+}

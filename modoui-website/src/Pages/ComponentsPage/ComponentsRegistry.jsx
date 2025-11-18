@@ -3,147 +3,285 @@ import * as alerts from '../../../../modoui-core/src/libraryComponents/Alerts/Al
 import * as inputs from '../../../../modoui-core/src/libraryComponents/Inputs/Inputs.jsx'
 import * as loaders from '../../../../modoui-core/src/libraryComponents/Loaders/Loaders.jsx'
 import * as sliders from '../../../../modoui-core/src/libraryComponents/Sliders/Sliders.jsx'
-import * as toggles from '../../../../modoui-core/src/libraryComponents/Toggles/Toggles.jsx'
 
 export const componentsList = [
    {
       name: "PrimaryButton",
-      component: <buttons.PrimaryButton props={""} text={"Click Me"} />,
+      component: <buttons.PrimaryButton text={"Click Me"} />,
       display: `<PrimaryButton props={props} text={text} />`,
       type: "button"
    },
 
    {
       name: "OutlineButton",
-      component: <buttons.OutlineButton props={""} text={"Click Me"} />,
+      component: <buttons.OutlineButton text={"Click Me"} />,
       display: `<OutlineButton props={props} text={text} />`,
       type: "button"
    },
 
    {
       name: "GradientButton",
-      component: <buttons.GradientButton props={""} text={"Click Me"} />,
+      component: <buttons.GradientButton text={"Click Me"} />,
       display: `<GradientButton props={props} text={text} />`,
       type: "button"
    },
 
    {
       name: "GlassButton",
-      component: <buttons.GlassButton props={{backgroundColor: "black"}} text={"Click Me"} />,
+      component: <buttons.GlassButton text={"Click Me"} />,
       display: `<GlassButton props={props} text={text} />`,
+      type: "button"
+   },
+   
+   {
+      name: "ShadowButton",
+      component: <buttons.ShadowButton text={"Click Me"} />,
+      display: `<ShadowButton props={props} text={text} />`,
+      type: "button"
+   },
+   
+   {
+      name: "PillButton",
+      component: <buttons.PillButton text={"Click Me"} />,
+      display: `<PillButton props={props} text={text} />`,
+      type: "button"
+   },
+   
+   {
+      name: "NeonButton",
+      component: <buttons.NeonButton text={"Click Me"} />,
+      display: `<NeonButton props={props} text={text} />`,
+      type: "button"
+   },
+   
+   {
+      name: "SoftButton",
+      component: <buttons.SoftButton text={"Click Me"} />,
+      display: `<SoftButton props={props} text={text} />`,
+      type: "button"
+   },
+   
+   {
+      name: "IconButton",
+      component: <buttons.IconButton />,
+      display: `<IconButton props={props} text={icon} />`,
       type: "button"
    },
 
    {
       name: "PrimaryAlert",
-      component: <alerts.PrimaryAlert props={""} />,
+      component: <alerts.PrimaryAlert />,
       display: `<PrimaryAlert props={props} />`,
       type: "alert"
    },
 
    {
       name: "SuccessAlert",
-      component: <alerts.SuccessAlert props={""} />,
+      component: <alerts.SuccessAlert />,
       display: `<SuccessAlert props={props} />`,
       type: "alert"
    },
 
    {
       name: "WarningAlert",
-      component: <alerts.WarningAlert props={""} />,
+      component: <alerts.WarningAlert />,
       display: `<WarningAlert props={props} />`,
       type: "alert"
    },
 
    {
       name: "ErrorAlert",
-      component: <alerts.ErrorAlert props={""} />,
+      component: <alerts.ErrorAlert />,
       display: `<ErrorAlert props={props} />`,
       type: "alert"
    },
 
    {
       name: "InfoAlert",
-      component: <alerts.InfoAlert props={""} />,
+      component: <alerts.InfoAlert />,
       display: `<InfoAlert props={props} />`,
+      type: "alert"
+   },
+   
+   {
+      name: "SecondaryAlert",
+      component: <alerts.SecondaryAlert />,
+      display: `<SecondaryAlert props={props} />`,
+      type: "alert"
+   },
+   
+   {
+      name: "DarkAlert",
+      component: <alerts.DarkAlert />,
+      display: `<DarkAlert props={props} />`,
+      type: "alert"
+   },
+   
+   {
+      name: "GradientAlert",
+      component: <alerts.GradientAlert />,
+      display: `<GradientAlert props={props} />`,
+      type: "alert"
+   },
+   
+   {
+      name: "MinimalAlert",
+      component: <alerts.MinimalAlert />,
+      display: `<MinimalAlert props={props} />`,
+      type: "alert"
+   },
+   
+   {
+      name: "GlassAlert",
+      component: <alerts.GlassAlert />,
+      display: `<GlassAlert props={props} />`,
       type: "alert"
    },
 
    {
       name: "PrimaryInput",
       component: <inputs.PrimaryInput props={{width: "80%"}} />,
-      display: `<PrimaryInput props={props} />`,
+      display: `<PrimaryInput props={props} placeholder={placeholder} />`,
       type: "input"
    },
 
    {
       name: "OutlineInput",
       component: <inputs.OutlineInput props={{width: "80%"}} />,
-      display: `<OutlineInput props={props} />`,
+      display: `<OutlineInput props={props} placeholder={placeholder} />`,
       type: "input"
    },
 
    {
       name: "FilledInput",
       component: <inputs.FilledInput props={{width: "80%"}} />,
-      display: `<FilledInput props={props} />`,
+      display: `<FilledInput props={props} placeholder={placeholder} />`,
       type: "input"
-
    },
 
    {
       name: "UnderlineInput",
       component: <inputs.UnderlineInput props={{width: "80%"}} />,
-      display: `<UnderlineInput props={props} />`,
+      display: `<UnderlineInput props={props} placeholder={placeholder} />`,
       type: "input"
    },
    
    {
       name: "GlowInput",
       component: <inputs.GlowInput props={{width: "80%"}} />,
-      display: `<GlowInput props={props} />`,
+      display: `<GlowInput props={props} placeholder={placeholder} />`,
+      type: "input"
+   },
+
+   {
+      name: "RoundedInput",
+      component: <inputs.RoundedInput props={{width: "80%"}} />,
+      display: `<RoundedInput props={props} placeholder={placeholder} />`,
+      type: "input"
+   },
+
+   {
+      name: "GlassInput",
+      component: <inputs.GlassInput props={{width: "80%"}} />,
+      display: `<GlassInput props={props} placeholder={placeholder} />`,
+      type: "input"
+   },
+
+   {
+      name: "ShadowInput",
+      component: <inputs.ShadowInput props={{width: "80%"}} />,
+      display: `<ShadowInput props={props} placeholder={placeholder} />`,
+      type: "input"
+   },
+   
+   {
+      name: "TerminalInput",
+      component: <inputs.TerminalInput props={{width: "80%"}} />,
+      display: `<TerminalInput props={props} placeholder={placeholder} />`,
+      type: "input"
+   },
+
+   {
+      name: "NeonPulseInput",
+      component: <inputs.NeonPulseInput props={{width: "80%"}} />,
+      display: `<NeonPulseInput props={props} placeholder={placeholder} />`,
       type: "input"
    },
 
    {
       name: "CircleLoader",
-      component: <loaders.CircleLoader props={""} />,
+      component: <loaders.CircleLoader />,
       display: `<CircleLoader props={props} />`,
       type: "loader"
    },
 
    {
       name: "DottedLoader",
-      component: <loaders.DottedLoader props={""} />,
+      component: <loaders.DottedLoader />,
       display: `<DottedLoader props={props} />`,
       type: "loader"
    },
 
    {
       name: "DualRingLoader",
-      component: <loaders.DualRingLoader props={""} />,
+      component: <loaders.DualRingLoader />,
       display: `<DualRingLoader props={props} />`,
       type: "loader"
    },
 
    {
       name: "DotPulseLoader",
-      component: <loaders.DotPulseLoader props={""} />,
+      component: <loaders.DotPulseLoader />,
       display: `<DotPulseLoader props={props} />`,
       type: "loader"
    },
 
    {
       name: "BarLoader",
-      component: <loaders.BarLoader props={""} />,
+      component: <loaders.BarLoader />,
       display: `<BarLoader props={props} />`,
       type: "loader"
    },
 
    {
       name: "BounceLoader",
-      component: <loaders.BounceLoader props={""} />,
+      component: <loaders.BounceLoader />,
       display: `<BounceLoader props={props} />`,
+      type: "loader"
+   },
+
+   {
+      name: "SquareSpinLoader",
+      component: <loaders.SquareSpinLoader />,
+      display: `<SquareSpinLoader props={props} />`,
+      type: "loader"
+   },
+   
+   {
+      name: "WaveBarsLoader",
+      component: <loaders.WaveBarsLoader />,
+      display: `<WaveBarsLoader props={props} />`,
+      type: "loader"
+   },
+   
+   {
+      name: "TypingDotsLoader",
+      component: <loaders.TypingDotsLoader />,
+      display: `<TypingDotsLoader props={props} />`,
+      type: "loader"
+   },
+   
+   {
+      name: "FlipCardLoader",
+      component: <loaders.FlipCardLoader />,
+      display: `<FlipCardLoader props={props} />`,
+      type: "loader"
+   },
+   
+   {
+      name: "RippleLoader",
+      component: <loaders.RippleLoader />,
+      display: `<RippleLoader props={props} />`,
       type: "loader"
    },
 
@@ -183,24 +321,38 @@ export const componentsList = [
    },
 
    {
-      name: "PrimaryToggle",
-      component: <toggles.PrimaryToggle props={""} />,
-      display: `<PrimaryToggle props={props} text={text} />`,
-      type: "toggle"
+      name: "ShinySlider",
+      component: <sliders.ShinySlider props={{width: "80%"}} />,
+      display: `<ShinySlider props={props} />`,
+      type: "slider"
    },
-
+   
    {
-      name: "PrimaryCheckbox",
-      component: <toggles.PrimaryCheckbox props={""} />,
-      display: `<PrimaryCheckbox props={props} text={text} />`,
-      type: "toggle"
+      name: "MetalSlider",
+      component: <sliders.MetalSlider props={{width: "80%"}} />,
+      display: `<MetalSlider props={props} />`,
+      type: "slider"
    },
-
+   
    {
-      name: "PrimaryRadio",
-      component: <toggles.PrimaryRadio props={""} />,
-      display: `<PrimaryRadio props={props} text={text} />`,
-      type: "toggle"
+      name: "ChunkySlider",
+      component: <sliders.ChunkySlider props={{width: "80%"}} />,
+      display: `<ChunkySlider props={props} />`,
+      type: "slider"
+   },
+   
+   {
+      name: "GlowNeonSlider",
+      component: <sliders.GlowNeonSlider props={{width: "80%"}} />,
+      display: `<GlowNeonSlider props={props} />`,
+      type: "slider"
+   },
+   
+   {
+      name: "RainbowSlider",
+      component: <sliders.RainbowSlider props={{width: "80%"}} />,
+      display: `<RainbowSlider props={props} />`,
+      type: "slider"
    },
 ]
 

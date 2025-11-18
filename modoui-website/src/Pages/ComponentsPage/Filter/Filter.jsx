@@ -11,7 +11,6 @@ export default function Filter({filter, setFilter, isMobile})
                <button className={`${ filter === 'input' && styles.clicked}`} onClick={() => setFilter("input")}>Inputs</button>
                <button className={`${ filter === 'slider' && styles.clicked}`} onClick={() => setFilter("slider")}>Sliders</button>
                <button className={`${ filter === 'alert' && styles.clicked}`} onClick={() => setFilter("alert")}>Alerts</button>
-               <button className={`${ filter === 'toggle' && styles.clicked}`} onClick={() => setFilter("toggle")}>Toggles</button>
          </div>}
 
          {isMobile && <div className={styles.optionsContianer}>
@@ -23,7 +22,6 @@ export default function Filter({filter, setFilter, isMobile})
                <option value="input">Inputs</option>
                <option value="slider">Sliders</option>
                <option value="alert">Alerts</option>
-               <option value="toggle">Toggles</option>
             </select>
          </div>}
       </>

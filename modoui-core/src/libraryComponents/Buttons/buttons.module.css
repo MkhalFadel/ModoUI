@@ -36,3 +36,66 @@ button {
   background-color: rgba(255, 255, 255, 0.15);
   transform: scale(1.03);
 }
+
+.shadow {
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shadow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+
+.pill {
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.pill:hover {
+  opacity: 0.8;
+}
+
+
+.neon {
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: box-shadow 0.2s ease, text-shadow 0.2s ease;
+}
+
+.neon:hover {
+  box-shadow: 0 0 14px currentColor;
+  text-shadow: 0 0 6px currentColor;
+}
+
+
+.soft {
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.soft:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.iconButton {
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  user-select: none;
+}
+
+.iconButton:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}

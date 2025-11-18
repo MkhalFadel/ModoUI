@@ -4,3 +4,8 @@ export {BounceLoader} from './Loaders.jsx';
 export {CircleLoader} from './Loaders.jsx';
 export {DotPulseLoader} from './Loaders.jsx';
 export {DottedLoader} from './Loaders.jsx';
+export {FlipCardLoader} from './Loaders.jsx';
+export {RippleLoader} from './Loaders.jsx';
+export {SquareSpinLoader} from './Loaders.jsx';
+export {TypingDotsLoader} from './Loaders.jsx';
+export {WaveBarsLoader} from './Loaders.jsx';

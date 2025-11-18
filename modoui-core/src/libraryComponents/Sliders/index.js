@@ -3,3 +3,8 @@ export {GlassSlider} from './Sliders.jsx';
 export {GradientSlider} from './Sliders.jsx';
 export {NeonSlider} from './Sliders.jsx';
 export {SecondarySlider} from './Sliders.jsx';
+export {ChunkySlider} from './Sliders.jsx';
+export {GlowNeonSlider} from './Sliders.jsx';
+export {MetalSlider} from './Sliders.jsx';
+export {RainbowSlider} from './Sliders.jsx';
+export {ShinySlider} from './Sliders.jsx';

@@ -2,3 +2,8 @@ export {PrimaryButton} from './Buttons.jsx';
 export {GlassButton} from './Buttons.jsx';
 export {GradientButton} from './Buttons.jsx';
 export {OutlineButton} from './Buttons.jsx';
+export {ShadowButton} from './Buttons.jsx';
+export {NeonButton} from './Buttons.jsx';
+export {IconButton} from './Buttons.jsx';
+export {PillButton} from './Buttons.jsx';
+export {SoftButton} from './Buttons.jsx';

@@ -5,7 +5,6 @@ import * as buttons from '../../../../modoui-core/src/libraryComponents/Buttons/
 import * as loaders from '../../../../modoui-core/src/libraryComponents/Loaders/Loaders.jsx'
 import * as inputs from '../../../../modoui-core/src/libraryComponents/Inputs/Inputs.jsx';
 import * as alerts from '../../../../modoui-core/src/libraryComponents/Alerts/Alerts.jsx';
-import * as toggles from '../../../../modoui-core/src/libraryComponents/Toggles/Toggles.jsx';
 import * as sliders from '../../../../modoui-core/src/libraryComponents/Sliders/Sliders.jsx';
 import CodeBlock from '../../Components/CodeBlock/CodeBlock.jsx';
 
@@ -48,19 +47,19 @@ export default function Playground({ item, page, setPage, theme, setTheme })
                      </tr>
                   </thead>
                   <tbody>
-                     <tr>
-                        <td>text</td>
+                     {item.type !== 'loader' && <tr>
+                        <td>{item.type === 'input' ? 'placeholder' : 'text'}</td>
                         <th>String</th>
                         <th>Enter Text...</th>
                         <th>Text Showen</th>
-                     </tr>
+                     </tr>}
                      <tr>
                         <td>props</td>
                         <th>Object</th>
                         <th>{"{ }"}</th>
-                        <th>Styles</th>
+                        <th>{item.type === 'slider' ? "Styles+min/max values" : "Styles"}</th>
                      </tr>
-                     {(item.type === "button" || item.type === "input") && (<tr>
+                     {(item.type === "button" || item.type === "input" || item.type === 'slider') && (<tr>
                         <td>{item.type ==='button' ? "onClick" : "onChange"}</td>
                         <th>function</th>
                         <th>undefined</th>
@@ -72,6 +71,12 @@ export default function Playground({ item, page, setPage, theme, setTheme })
                         <th>undefined</th>   
                         <th>Pass a name to prevent Multiple answers if needed</th>   
                      </tr>}
+                     {(item.type === 'input' || item.type === 'slider') && (<tr>
+                        <td>Value</td>
+                        <th>Variable</th>   
+                        <th>undefined</th>   
+                        <th>Pass a variable</th>   
+                     </tr>)}
                   </tbody>
                </table>
                <div className={styles.installSection}>

@@ -1,26 +1,23 @@
 import styles from './homepage.module.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Logo from "../../assets/ModoUI.svg"
 import { Link } from 'react-router-dom'
 import NavBar from '../../Components/NavBar/NavBar'
 import Footer from '../../Components/Footer/Footer'
-
+import { PrimaryButton } from '@mkhalfadel/modoui-core'
 export default function Homepage({theme, setTheme, page, setPage})
 {
 
+   const [text, setText] = useState(50);
 
    useEffect(() => {
       setPage("home")
    }, [])
 
-   function click()
-   {
-      alert("hello there")
-   }
-
    return (
       <main className={styles.container}>
-
+         <div style={{marginLeft: "350px"}}>
+         </div>
          <NavBar theme={theme} setTheme={setTheme} page={page} />
          <div className={styles.logoContainer}>
             <img src={Logo} alt="ModoUILogo" className={styles.logo} />
@@ -69,7 +66,7 @@ export default function Homepage({theme, setTheme, page, setPage})
                      <br /><br />      
                      export default function App( ) {'{'}
                      <br />
-                     &nbsp;&nbsp;return &lt;<span style={{color: "#E06C75"}}>PrimaryButton </span> text={"{Click Me...}"} {"/>"}
+                     &nbsp;&nbsp;return &lt;<span style={{color: "#E06C75"}}>PrimaryButton </span> text={'{"Click Me..."}'} {"/>"}
                      <br />
                      {'}'}
                      

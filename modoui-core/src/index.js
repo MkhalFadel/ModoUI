@@ -14,6 +14,3 @@ export * from "./libraryComponents/Loaders/Loaders.jsx";
 
 // Sliders
 export * from "./libraryComponents/Sliders/Sliders.jsx";
-
-// Toggles
-export * from "./libraryComponents/Toggles/Toggles.jsx";
