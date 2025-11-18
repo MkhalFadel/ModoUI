@@ -1,16 +1,36 @@
-# React + Vite
+# ModoUI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![npm version](https://img.shields.io/npm/v/@mkhalfadel/modoui-core)](https://www.npmjs.com/package/@mkhalfadel/modoui-core)
+[![GitHub Pages](https://img.shields.io/badge/Live_Demo-Visit-green)](https://mkhalfadel.github.io/ModoUI/)
 
-Currently, two official plugins are available:
+**ModoUI** is a fully customizable React UI component library paired with a modern documentation website and live component playground.  
+It provides clean, modern, theme-friendly components that help developers build beautiful interfaces faster.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎨 **Modern React UI Components**
+- ⚙️ **Fully Customizable** using props
+- 🌙 **Theme Support** (Light & Dark)
+- 🚀 **Fast Development Workflow** (Rollup + Vite)
+- 🧪 **Interactive Playground** for real-time testing
+- 📦 **Published on NPM**
+- 📚 **Documentation Website**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔗 Live Demo
+
+👉 **Website:** https://mkhalfadel.github.io/ModoUI/
+
+Explore and test every component interactively.
+
+---
+
+## 📦 Installation
+
+Install the library from npm:
+
+```bash
+npm install @mkhalfadel/modoui-core
