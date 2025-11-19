@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <meta charset="UTF-8" />
-      <title>Redirecting…</title>
-      <script>
-         // Redirect only ONCE — prevents infinite loops
-         const redirect = sessionStorage.getItem("redirected");
+   <meta charset="utf-8">
+   <title>Redirecting...</title>
+   <script>
+   // GitHub Pages SPA redirect by rafgraph
+   // See: https://github.com/rafgraph/spa-github-pages
 
-         if (!redirect) {
-         // Save the fact that we redirected once
-         sessionStorage.setItem("redirected", "yes");
+      const l = window.location;
+      const redirect = sessionStorage.getItem("spa-redirect");
 
-         // Preserve the full path
-         const newUrl = location.origin + "/ModoUI" + location.pathname.replace("/ModoUI", "") + location.search + location.hash;
+      if (!redirect) {
+      sessionStorage.setItem(
+         " spa-redirect",
+         JSON.stringify({
+            pathname: l.pathname,
+            search: l.search,
+            hash: l.hash
+         })
+      );
 
-         location.replace(newUrl);
-         } else {
-         // Clear flag and go to main page
-         sessionStorage.removeItem("redirected");
-         location.replace("/ModoUI/");
-         }
-      </script>
+      const repo = "/ModoUI";
+      const newUrl = repo + "/?redirect=true";
+      window.location.replace(newUrl);
+      } else {
+         const { pathname, search, hash } = JSON.parse(redirect);
+         sessionStorage.removeItem("spa-redirect");
+         const newUrl = pathname + search + hash;
+         window.history.replaceState(null, null, newUrl);
+      }
+   </script>
    </head>
    <body></body>
 </html>
