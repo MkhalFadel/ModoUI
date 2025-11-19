@@ -18,7 +18,7 @@ export function PrimaryInput({placeholder, props, onChange, value})
          onChange={e => onChange(e)}
          type="text" 
          className={styles.input} 
-         placeholder={placeholder || "Enter Text..."} 
+         placeholder={placeholder ?? "Enter Text..."} 
          style={style} />
    );
 }
@@ -39,7 +39,7 @@ export function OutlineInput({ placeholder, props, onChange, value }) {
          value={value}
          type="text"
          className={styles.outline}
-         placeholder={placeholder || "Enter text..."}
+         placeholder={placeholder ?? "Enter text..."}
          style={style}
          onChange={e => onChange(e)}
       />
@@ -62,7 +62,7 @@ export function FilledInput({ placeholder, props, onChange, value }) {
          value={value}
          type="text"
          className={styles.filled}
-         placeholder={placeholder || "Enter text..."}
+         placeholder={placeholder ?? "Enter text..."}
          style={style}
          onChange={e => onChange(e)}
       />
@@ -86,7 +86,7 @@ export function UnderlineInput({ placeholder, props, onChange, value }) {
          value={value}
          type="text"
          className={styles.underline}
-         placeholder={placeholder || "Enter text..."}
+         placeholder={placeholder ?? "Enter text..."}
          style={style}
          onChange={e => onChange(e)}
       />
@@ -110,7 +110,7 @@ export function GlowInput({ placeholder, props, onChange, value }) {
          value={value}
          type="text"
          className={styles.glow}
-         placeholder={placeholder || "Enter text..."}
+         placeholder={placeholder ?? "Enter text..."}
          style={style}
          onChange={e => onChange(e)}
       />
@@ -134,7 +134,7 @@ export function RoundedInput({ placeholder, props, onChange, value }) {
          value={value}
          type="text"
          className={styles.rounded}
-         placeholder={placeholder || "Type something..."}
+         placeholder={placeholder ?? "Type something..."}
          style={style}
          onChange={e => onChange(e)}
       />
@@ -159,7 +159,7 @@ export function GlassInput({ placeholder, props, onChange, value }) {
          value={value}
          type="text"
          className={styles.glass}
-         placeholder={placeholder || "Glass input..."}
+         placeholder={placeholder ?? "Glass input..."}
          style={style}
          onChange={e => onChange(e)}
       />
@@ -184,7 +184,7 @@ export function ShadowInput({ placeholder, props, onChange, value }) {
          value={value}
          type="text"
          className={styles.shadow}
-         placeholder={placeholder || "Shadow input..."}
+         placeholder={placeholder ?? "Shadow input..."}
          style={style}
          onChange={e => onChange(e)}
       />

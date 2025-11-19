@@ -4,15 +4,19 @@ import Logo from "../../assets/ModoUI.svg"
 import { Link } from 'react-router-dom'
 import NavBar from '../../Components/NavBar/NavBar'
 import Footer from '../../Components/Footer/Footer'
-import { PrimaryButton } from '@mkhalfadel/modoui-core'
 export default function Homepage({theme, setTheme, page, setPage})
 {
-
-   const [text, setText] = useState(50);
 
    useEffect(() => {
       setPage("home")
    }, [])
+
+   function scrollToId(id) {
+      const el = document.getElementById(id);
+      if (el) {
+         el.scrollIntoView({ behavior: "smooth" });
+      }
+   }
 
    return (
       <main className={styles.container}>
@@ -28,8 +32,8 @@ export default function Homepage({theme, setTheme, page, setPage})
          </div>
 
          <div className={styles.links}>
-            <a href="#installation">Get Started</a>
-            <Link className={styles.link} to="/Components">View Components</Link>
+            <span href="#installation" onClick={() => scrollToId("installation")}>Get Started</span>
+            <Link className={styles.link} to="/Components/">View Components</Link>
          </div>
 
          <div className={styles.featuresContainer}>

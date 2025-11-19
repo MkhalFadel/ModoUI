@@ -289,7 +289,7 @@ export const componentsList = [
       name: "PrimarySlider",
       component: <sliders.PrimarySlider props={{width: "80%"}} />,
       display: `<PrimarySlider props={props} />`,
-      type: "slider"
+      type: "slider" 
    },
 
    {

@@ -52,13 +52,15 @@ h1{
    transition: all ease-in-out 0.15s;
 }
 
-.links a{
+.links span{
+   font-family: 'Inter', sans-serif;
    background-color: #098cff;
    scroll-behavior: smooth;
    color: white;
+   cursor: pointer;
 }
 
-.links a:hover{
+.links span:hover{
    background-color: var(--linkHover);
 }
 

@@ -5,6 +5,7 @@ import { componentsList } from './ComponentsRegistry.jsx'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Filter from './Filter/Filter.jsx'
+import { saveStorage } from '../../sessionStorage.js'
 
 export default function Components({theme, setTheme, setItem, search, setSearch, page, setPage})
 {
@@ -22,6 +23,7 @@ export default function Components({theme, setTheme, setItem, search, setSearch,
    function navigatePage(compName)
    {
       const showCased = componentsList.find(c => c.name === compName)
+      saveStorage(showCased.name);
       setItem(showCased);
       navigate("/Playground")
    }

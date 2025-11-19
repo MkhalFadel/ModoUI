@@ -15,7 +15,7 @@ export default function Footer({theme})
             <div className={styles.pages}>
                <p>Pages:</p>
                <Link to="/">Homepage</Link>
-               <Link to="/Components">Components Page</Link>
+               <Link to="/Components/">Components Page</Link>
             </div>
             <div className={styles.projects}>
                <p>Other Projects:</p>
