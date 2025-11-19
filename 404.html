@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <meta charset="UTF-8" />
+      <title>Redirecting…</title>
       <script>
-         const path = window.location.pathname.replace("/ModoUI", "");
-         window.location.replace("/ModoUI/" + path);
+         // Redirect only ONCE — prevents infinite loops
+         const redirect = sessionStorage.getItem("redirected");
+
+         if (!redirect) {
+         // Save the fact that we redirected once
+         sessionStorage.setItem("redirected", "yes");
+
+         // Preserve the full path
+         const newUrl = location.origin + "/ModoUI" + location.pathname.replace("/ModoUI", "") + location.search + location.hash;
+
+         location.replace(newUrl);
+         } else {
+         // Clear flag and go to main page
+         sessionStorage.removeItem("redirected");
+         location.replace("/ModoUI/");
+         }
       </script>
    </head>
    <body></body>
