@@ -1,35 +1,17 @@
 <!DOCTYPE html>
 <html>
    <head>
-   <meta charset="utf-8">
-   <title>Redirecting...</title>
-   <script>
-   // GitHub Pages SPA redirect by rafgraph
-   // See: https://github.com/rafgraph/spa-github-pages
+      <meta charset="utf-8" />
+      <title>Redirecting…</title>
+      <script>
+         const current = window.location.pathname;
 
-      const l = window.location;
-      const redirect = sessionStorage.getItem("spa-redirect");
-
-      if (!redirect) {
-      sessionStorage.setItem(
-         "spa-redirect",
-         JSON.stringify({
-            pathname: l.pathname,
-            search: l.search,
-            hash: l.hash
-         })
-      );
-
-      const repo = "/ModoUI";
-      const newUrl = repo + "/?redirect=true";
-      window.location.replace(newUrl);
-      } else {
-         const { pathname, search, hash } = JSON.parse(redirect);
-         sessionStorage.removeItem("spa-redirect");
-         const newUrl = pathname + search + hash;
-         window.history.replaceState(null, null, newUrl);
-      }
-   </script>
+         // If URL does NOT start with /ModoUI → redirect
+         if (!current.startsWith("/ModoUI")) {
+            const newUrl = "/ModoUI" + current + window.location.search;
+            window.location.replace(newUrl);
+         }
+         // If it already starts with /ModoUI → do nothing (no loop)
+      </script>
    </head>
-   <body></body>
 </html>
