@@ -6,17 +6,25 @@ on:
 
 permissions:
   contents: read
-  id-token: write
+  id-token: write   # Required for npm trusted publishing
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: modoui-core   # IMPORTANT: publish from subfolder
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
       - run: npm ci
-      - run: npm run build # if you build before publish; remove if none
+
+      # Publish the library (from modoui-core folder)
       - run: npm publish --access public
