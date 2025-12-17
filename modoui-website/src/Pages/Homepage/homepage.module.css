@@ -1,227 +1,260 @@
 @import '../../App.css';
 
-html{
+html {
    scroll-behavior: smooth;
 }
 
-
-h2{
+h1 {
+   font-size: 2.2rem;
    color: var(--primaryText);
 }
 
-.container{
-   overflow: hidden;
+h2 {
+   color: var(--primaryText);
+   font-size: 1.8rem;
 }
 
-.logoContainer
-{
+.container {
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.logoContainer {
    display: flex;
    align-items: center;
-   margin-top: -50px;
+   margin-top: 0;
 }
 
-.logo{
-   width: 350px;
-   height: 350px;
+.logo {
+   width: 220px;
+   height: 220px;
 }
 
-.titleContainer{
-   margin-left: -70px;
+.titleContainer {
+   margin-left: -40px;
 }
 
-h1{
-   font-size: 3.5rem;
+.description {
+   font-size: 0.9rem;
    color: var(--primaryText);
 }
 
-.description{
-   font-size: 1.2rem;
-   color: var(--primaryText);
+.links {
+   margin-top: -20px;
+   text-align: center;
+   width: 100%;
 }
 
-.links{
-   margin-top: -50px;
-   margin-left: 82px;
-}
-
-.links *{
+.links * {
    text-decoration: none;
-   margin-right: 15px;
+   margin-right: 10px;
    padding: 7px 15px;
    border-radius: 7px;
    transition: all ease-in-out 0.15s;
 }
 
-.links span{
+.links span {
    font-family: 'Inter', sans-serif;
    background-color: #098cff;
-   scroll-behavior: smooth;
    color: white;
    cursor: pointer;
 }
 
-.links span:hover{
+.links span:hover {
    background-color: var(--linkHover);
 }
 
-.links .link{
+.links .link {
    border: 1px solid black;
    color: black;
    background-color: rgb(207, 207, 207);
 }
 
-.links .link:hover{
-   background-color: rgb(255, 255, 255);
+.links .link:hover {
+   background-color: white;
 }
 
-.featuresContainer{
-   margin-top: 65px;
+.featuresContainer {
+   margin-top: 50px;
+   width: 100%;
 }
 
-.featuresContainer h2{
-   font-size: 2.5rem;
-   margin-left: 88px;
+.featuresContainer h2 {
+   text-align: center;
    margin-bottom: 15px;
 }
 
 .features {
    display: flex;
+   flex-direction: column;
+   gap: 20px;
    align-items: center;
-   justify-content: space-evenly;
 }
 
-.features div{
+.features div {
    background-color: rgb(122, 122, 122);
    padding: 7px 15px 15px;
    border-radius: 7px;
+   width: 85%;
 }
 
-.features div *{
+.features div * {
    color: white;
 }
 
-.features div h3{
+.features div p {
+   font-size: 1rem;
+}
+
+.installationContainer {
+   margin-top: 50px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.installationContainer h2 {
+   text-align: center;
    margin-bottom: 10px;
 }
 
-.features div p{
-   font-size: 1.1rem;
-}
-
-.installationContainer{
-   margin-left: 82px;
-   margin-top: 65px;
-}
-
-.installationContainer h2{
-   font-size: 2.5rem;
-   margin-bottom: 10px;
-}
-
-.code{
+.code {
    background-color: #1e1e1e;
    border-radius: 7px;
-   max-width: 520px;
+   width: 90%;
    padding: 15px;
    margin-top: 10px;
-   margin-bottom: 50px;
+   margin-bottom: 40px;
    display: flex;
    align-items: center;
    justify-content: space-between;
    font-family: 'Space Mono', sans-serif;
 }
 
-.code button{
+.code button {
    background-color: white;
    color: black;
    border: none;
-   font-size: 1rem;
+   font-size: 0.9rem;
+   max-width: 40%;
 }
 
-.code button:hover{
+.code button:hover {
    background-color: rgb(224, 224, 224);
 }
 
-.code button:active{
+.code button:active {
    background-color: rgb(170, 170, 170);
 }
 
-.codeBlock{
+.codeBlock {
    color: white;
 }
 
-@media (max-width: 480px){
-   .logoContainer{
-      margin-right: 70px;
+@media (min-width: 768px) {
+   h1 {
+      font-size: 2.5rem;
    }
 
-   .description{
-      font-size: 0.9rem;
-   }
-
-   .links{
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-      margin-left: 5px;
-   }
-}
-
-@media (max-width: 768px){
-   .container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-
-   .logoContainer{
-      margin-top: 0px;
-   }
-
-   .logo{
+   .logo {
       width: 230px;
       height: 230px;
    }
 
-   .titleContainer{
+   .titleContainer {
       margin-left: -50px;
    }
 
-   h1{font-size: 2.5rem;}
-
-   .links{
-      margin-top: -30px; 
+   .links {
+      margin-top: -30px;
    }
 
-   .featuresContainer h2{
-      text-align: center;
-      width: 100%;
-      margin: 0 auto 10px;
-   }
-
-   .features{
-      flex-direction: column;
-      gap: 20px;
-   }
-
-   .features div{
-      width: 85%;
-   }
-
-   .installationContainer{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-left: 0px;
+   .features div {
+      width: 70%;
    }
 
    .installationContainer * {
       width: 90%;
    }
+}
 
-   .installationContainer h2{text-align: center;}
+@media (min-width: 1024px) {
+   .container {
+      align-items: flex-start;
+   }
 
-   .code button{
-      max-width: 40%;
+   .logoContainer {
+      margin-top: -50px;
+   }
+
+   .logo {
+      width: 300px;
+      height: 300px;
+   }
+
+   .titleContainer {
+      margin-left: -60px;
+   }
+
+   h1 {
+      font-size: 3rem;
+   }
+
+   .description {
+      font-size: 1.1rem;
+   }
+
+   .links {
+      margin-left: 82px;
+      text-align: left;
+   }
+
+   .features {
+      flex-direction: row;
+      justify-content: space-evenly;
+   }
+
+   .features div {
+      width: auto;
+   }
+
+   .featuresContainer h2 {
+      text-align: left;
+      margin-left: 88px;
+   }
+
+   .installationContainer {
+      margin-left: 82px;
+      align-items: flex-start;
+   }
+
+   .installationContainer h2 {
+      text-align: left;
+   }
+
+   .code {
+      max-width: 520px;
+}
+}
+
+@media (min-width: 1280px) {
+   .logo {
+      width: 350px;
+      height: 350px;
+   }
+
+   .titleContainer {
+      margin-left: -70px;
+   }
+
+   h1 {
+      font-size: 3.5rem;
+   }
+
+   .description {
+      font-size: 1.2rem;
    }
 }

@@ -20,7 +20,7 @@ export default function Footer({theme})
             <div className={styles.projects}>
                <p>Other Projects:</p>
                <a href="https://mkhalfadel.github.io/Lock-Ledger/" target='_blank'>Lock-Ledger</a>
-               <a href="https://github.com/MkhalFadel/Dukkan-Store" target='_blank'>Dukkan Store</a>
+               <a href="https://github.com/MkhalFadel/DukkanStore" target='_blank'>Dukkan Store</a>
                <a href="https://mkhalfadel.github.io/MatchingCards-Game/" target='_blank'>MatchingCards Game</a>
             </div>
          </div>
